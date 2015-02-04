@@ -9,13 +9,15 @@ define([
 		id: 'app-view',
 		html: [
 			'<div class="navbar navbar-default">',
-				'<a href="#" class="navbar-brand">Weather watcher</a>',
-				'<ul class="nav navbar-nav">',
-					'<li id="nav-dash"><a href="#/dashboard">Dashboard</a></li>',
-					'<li id="nav-about"><a href="#/about">About</a></li>',
-				'</ul>',
+				'<div class="container">',
+					'<a href="#" class="navbar-brand">Weather watcher</a>',
+					'<ul class="nav navbar-nav">',
+						'<li id="nav-dash"><a href="#/dashboard">Dashboard</a></li>',
+						'<li id="nav-about"><a href="#/about">About</a></li>',
+					'</ul>',
+				'</div>',
 			'</div>',
-			'<div id="content"></div>'
+			'<div id="content" class="container"></div>'
 		].join(''),
 
 		views: {},
