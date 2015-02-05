@@ -15,6 +15,7 @@ define([
 						'<li id="nav-dash"><a href="#/dashboard">Dashboard</a></li>',
 						'<li id="nav-about"><a href="#/about">About</a></li>',
 					'</ul>',
+					'<div class="navbar-text pull-right"></div>',
 				'</div>',
 			'</div>',
 			'<div id="content" class="container"></div>'
@@ -26,6 +27,8 @@ define([
 		},
 
 		initialize: function() {
+			this.listenTo(this.model, 'change', this.render);
+
 			this.views['about'] = new AboutView({
 				id: 'page-about',
 				className: 'page-view'
@@ -39,12 +42,20 @@ define([
 			this.$('#content').append(this.views['about'].render().el);
 			this.$('#content').append(this.views['dash'].render().el);
 		},
+
+		render: function() {
+			this.$el.css('background-color', this.model.get('backgroundColor'));
+			this.$('.navbar-text').html(this.model.get('welcomeMessage'));
+			return this;
+		},
 		
 		setPage: function(page) {
 			this.$('.nav li').removeClass('active');
 			this.$('.page-view').hide();
 			this.$('#page-' + page).show();
 			this.$('#nav-' + page).addClass('active');
+
+			this.model.set('welcomeMessage', 'Welcome to the ' + page + ' page');
 		}
 	});
 
