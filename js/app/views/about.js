@@ -12,7 +12,7 @@ define([
 		},
 
 		render: function() {
-			var html = '<h3>About page</h3>';
+			var html = '<h3 class="header">About page</h3>';
 			this.$el.html(html);
 			return this;
 		}

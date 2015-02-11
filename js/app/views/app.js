@@ -4,7 +4,7 @@ define([
 	'backbone',
 	'app/views/about',
 	'app/views/dash'
-], function($, _, Backbone, AboutView, DashView) {
+], function ($, _, Backbone, AboutView, DashView) {
 	var AppView = Backbone.View.extend({
 		id: 'app-view',
 		html: [

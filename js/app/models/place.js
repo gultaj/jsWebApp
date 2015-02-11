@@ -6,7 +6,9 @@ define([
 	var PlaceModel = Backbone.Model.extend({
 		defaults: {
 			'countryCode': '',
-			'name': ''
+			'name': '',
+			'coord': '',
+			'favorite': false
 		}
 	});
 

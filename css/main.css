@@ -1,1 +1,31 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/* App View */
+
+/* Header */
+#header {
+	margin: 0 10px 10px 10px;
+}
+.navbar {
+	border-radius: 0;
+}
+
+.header {
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.day-info {
+	margin-bottom: 5px;
+}
+.day-info>.img-thumbnail {
+	margin-right: 10px;
+}
+
+/* Places List */
+/*#places-list {
+	padding: 20px;
+}
+#places-list .panel {
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}*//*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
